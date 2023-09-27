@@ -10,7 +10,8 @@ slow_life_width, slow_life_height = 125,110
 slow_life_image = pygame.image.load(os.path.join("SiemaSlowLife","slowlife.png"))
 slow_life = pygame.transform.scale(slow_life_image,(slow_life_width,slow_life_height))
 mapa = pygame.transform.scale(pygame.image.load(os.path.join("SiemaSlowLife","mapa.jpg")),(width,height))
-vel = 1
+vel = 5
+FPS = 60
 
 
 def draw_windows(slow):
@@ -30,9 +31,11 @@ def dino_movement(keys_pressed,slow):
         slow.y +=  vel
 
 def main():
+    clock = pygame.time.Clock()
     slow = pygame.Rect(665,350,slow_life_width,slow_life_height)
     run = True
     while run:
+        clock.tick(FPS)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
@@ -40,5 +43,6 @@ def main():
         dino_movement(keys_pressed,slow)
         draw_windows(slow)
     pygame.quit()
+
 if __name__ == "__main__":
     main()
