@@ -36,10 +36,13 @@ class Player(pygame.sprite.Sprite):
 
     def set_state(self):
         self.state = 'idle'
-        if self.velocity_x > 0 or self.velocity_y < 0:
+        if self.velocity_x < 0 and self.velocity_y < 0:
+            self.state = 'moving left'
+        elif self.velocity_x > 0 or self.velocity_y < 0:
             self.state = 'moving right'
         elif self.velocity_x < 0 or self.velocity_y > 0:
             self.state = 'moving left'
+        
 
     def animate(self):
         now = pygame.time.get_ticks()

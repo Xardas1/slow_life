@@ -49,7 +49,7 @@ def main():
                 if event.key == pygame.K_s and event.key == pygame.K_d:
                     slowcik.DOWN_KEY, slowcik.RIGHT_KEY, slowcik.FACING_LEFT = True, True, False
                 if event.key == pygame.K_w and event.key == pygame.K_a:
-                    slowcik.UP_KEY, slowcik.LEFT_KEY, slowcik.FACING_LEFT = True, True, False
+                    slowcik.UP_KEY, slowcik.LEFT_KEY, slowcik.FACING_LEFT = True, True, True
                 if event.key == pygame.K_w and event.key == pygame.K_d:
                     slowcik.UP_KEY, slowcik.RIGHT_KEY, slowcik.FACING_LEFT = True, True, False
                 elif event.key == pygame.K_d:
