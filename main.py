@@ -12,6 +12,7 @@ slow_life_width, slow_life_height = 125,110
 slow_life_image = pygame.image.load(os.path.join("SiemaSlowLife","slowlife.png"))
 slow_life = pygame.transform.scale(slow_life_image,(slow_life_width,slow_life_height))
 mapa = pygame.transform.scale(pygame.image.load(os.path.join("SiemaSlowLife","mapa.jpg")),(width,height))
+rzeczka = pygame.draw.rect(screen,(0,0,0),pygame.Rect(30,30,60,60))
 vel = 5
 FPS = 60
 slowcik = Player()
